@@ -7,10 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   displayDetails: boolean = false;
-  detailInfo= [];
+  detailInfo = [];
 
   onDisplayDetails() {
     this.displayDetails=!this.displayDetails;
     this.detailInfo.push(new Date().toString());
+  }
+
+  getColor(infoIndex: number): string {
+    return infoIndex >3 ? "blue" : "white";
   }
 }
