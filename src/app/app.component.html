@@ -17,7 +17,7 @@
 <hr>
 <p 
   *ngFor = "let info of detailInfo" 
-  [ngStyle] = "{backgroundColor: getColor(detailInfo.indexOf(info))}"
-  [ngClass] = "{blueInfo: detailInfo.indexOf(info) > 3}">
+  [ngStyle] = "{backgroundColor: getColor(info)}"
+  [ngClass] = "{blueInfo: getBiggerThanFive(info)}">
   {{ info }}
 </p>

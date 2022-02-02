@@ -14,7 +14,11 @@ export class AppComponent {
     this.detailInfo.push(new Date().toString());
   }
 
-  getColor(infoIndex: number): string {
-    return infoIndex >3 ? "blue" : "white";
+  getBiggerThanFive(info: string): boolean{
+    return this.detailInfo.indexOf(info)>3
+  }
+
+  getColor(info: string): string {
+    return this.getBiggerThanFive(info) ? "blue" : "white";
   }
 }
