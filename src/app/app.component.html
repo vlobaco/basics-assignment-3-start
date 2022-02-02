@@ -11,3 +11,8 @@
     </div>
   </div>
 </div>
+<hr>
+<button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
+<p *ngIf="displayDetails">Secret Password = tuna</p>
+<hr>
+<p *ngFor="let info of detailInfo">{{ info }}</p>
